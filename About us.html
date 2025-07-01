@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درباره ما</title>
+    <script src="tailwind.js"></script>
+</head>
+<body>
+    <div class="bg-black text-white flex flex-col justify-center">
+        
+        <div class=" md:mr-15">
+            <header>
+                <div class="flex justify-between p-8 ">
+                    <div class=" justify-center pt-2">
+                        <button  onclick="showModal()"  class="md:hidden h-10 w-7">
+                            <img src="/assets/images/icons/icons8-menu.png">
+                        </button>
+                    </div>
+                    
+                    <div >
+                        <img class="md:hidden" src="assets/images/logo/logo.png" alt="لوگوی سایت">
+                    </div>
+
+                    <div class="hidden md:flex md:pt-15  md:p-0 md: md:absolute md:mr-15">
+                        <nav class="flex ">
+                            <ul class=" flex gap-10   ">
+                                <li><a href="index.html">خانه</a></li>
+                                <li><a href="About us.html">درباره ما</a></li>
+                                <li><a href="#tamas">تماس باما <i class="fa fa-angle-down"></i></a></li>
+                            </ul>
+                            <img class="mr-3 mt-1" src="/assets/images/icons/Arrow - Down 2.png">
+                        </nav>
+                    </div>  
+                    <div>
+                        
+                        <a href="index.html"><img class="md:hidden mt-5 ml-10" src="/assets/images/icons/Group 48.png"></a>
+                        <div class="hidden md:flex  ">
+                           <a href="signin.html"><img class=" " src="/assets/images/icons/Group 144.png" alt="ثبت نام و ورود در حالت دسکتاپ"></a> 
+                        </div>
+
+                    </div>              
+                </div>
+
+            </header>             
+                        
+        </div>
+
+
+        <div class="hidden mr-8 -mt-21" id="modal">
+                <div onclick="closeModal()" class="mb-10 flex">
+                    <img class="bg-black w-7" src="/assets/images/icons/Group 68-close navbar.png">
+                </div>
+                <div class="pt-5 pr-10 text-right bg-gray-700 text-white w-40 h-50 top-[100px] left-[12px]">
+                    <p> <a href="index.html">خانه</a></p><br>
+                    <p> <a href="#tamas"> تماس </a></p><br>
+                    <p> <a href="About us.html"></a>درباره ما</p>
+                </div>
+        </div>
+
+            <script>
+                 function showModal() {
+                const modal = document.getElementById('modal');
+                modal.classList.remove('hidden')
+                }
+
+                function closeModal() {
+                    const modal = document.getElementById('modal');
+                    modal.classList.add('hidden')
+                }
+            </script>
+
+
+        <div class="">
+
+            <div class="flex justify-center  mt-20 mb-20 ">
+                <div>
+                    <img class=" absolute -mt-10 -mr-10   " src="/assets/images/icons/Rectangle 14-top-right.png">
+                </div>  
+                <img class=" relative object-cover w-[408px] h-[309px] md:w-[1019px] md:h-[306px]" src="/assets/images/team/Union.png">
+                        
+                
+                <img class="hidden md:absolute md:flex md:mt-56 md:mr-241 " src="/assets/images/icons/Rectangle 15-bottm-left.png">
+               
+            </div>
+           
+
+
+            <div class="m-10 flex-col md:flex md:items-center md:mt-30">
+                <div class="mb-10 md:text-right md:w-270">
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold" >درباره ما</h3>
+                    </div>
+
+                    <div>
+                        <p class="text-gray-400 md:text-right ">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
+                    </div>
+                </div>
+            
+                
+                <img class="w-90 h-30 md:w-290 md:mt-20 md:mb-20 " src="/assets/images/banner/sponser.png">
+                
+            </div>
+            
+        </div>
+
+
+        
+         <div class="flex flex-col  mb-20  md:flex md:mb-50 " id="tamas">
+
+                <div class="flex mr-7 md:hidden  ">
+                    <p class=" text-xl  mb-10  ">راه های ارتباطی</p>
+                </div>
+
+
+                <div class= "flex flex-col items-center md:flex md:flex-row justify-center gap-5">
+                
+                    <div class=" flex border-2 border-gray-400 rounded-xl w-95 h-15  text-gray-400 mb-5 md:hover:bg-green-400 md:hover:text-white md:hover:border-green-400">
+                            <img class="w-5 h-5 m-5" src="/assets/images/icons/Message.png">
+                            <p class="m-4">ایمیل:</p>
+                           <email class="mt-4 mr-15">namadin@gmail.com</email> 
+                    </div>
+
+                    <div class=" flex border-2 border-gray-400 rounded-xl w-95 h-15  text-gray-400 mb-5 md:hover:bg-green-400 md:hover:text-white md:hover:border-green-400">
+                            <image class="w-5 h-5 m-5" src="/assets/images/icons/icons8-instagram-48.png" ></image>
+                            <p class="m-4">اینستاگرام:</p>
+                            <p class="mt-4 mr-20">@ubcomp4</p>
+                    </div>
+
+                    <div class=" flex border-2 border-gray-400 rounded-xl w-95  h-15  text-gray-400 mb-5  md:hover:bg-green-400 md:hover:text-white md:hover:border-green-400">
+                           <img class="w-5 h-5 m-5"  src="/assets/images/icons/Calling.png">
+                            <p class="m-4">شماره کارشناس:</p>
+                            <p class="mt-4 mr-10">09354444274</p>
+                    </div>
+
+                </div>
+                
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,43 +1,275 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>اطلاعات مسابقه</title>
+    <script src="tailwind.js"></script>
 </head>
 <body>
-    <section id="competition-info">
-        <h2>اطلاعات مسابقه</h2>
-        
-        <h3>عنوان مسابقه:</h3>
-        <p><strong>مسابقه برنامه‌نویسی </strong></p>
-        
-        <h3>توضیحات مسابقه:</h3>
-        <p>این مسابقه فرصتی عالی برای دانشجویانی است که می‌خواهند مهارت‌های برنامه نویسی خود را به چالش بکشند و جوایز ارزنده‌ای کسب کنند.
+    <div class="bg-black text-white flex flex-col justify-center ">
+        <div class="">
+            <div class=" hidden md:flex md:flex-col md:fixed  md:h-screen md:w-25 md:pt-5 md:border-l md:border-l-gray-400 md:border-1" >
+            <img class="hidden  md:flex md:justify-stretch " src="assets/images/logo/logo.png" alt="لوگوی سایت">
+        </div>
+        <div class=" md:mr-15">
+            <header>
+                <div class="flex justify-between p-8 ">
+                    <div class=" justify-center pt-2">
+                        <button  onclick="showModal()"  class="md:hidden h-10 w-7">
+                            <img src="/assets/images/icons/icons8-menu.png">
+                        </button>
+                    </div>
+                    
+                    <div >
+                        <img class="md:hidden" src="assets/images/logo/logo.png" alt="لوگوی سایت">
+                    </div>
 
-            .</p>
+                    <div class="hidden md:flex md:pt-15  md:p-0 md: md:absolute md:mr-15">
+                        <nav class="flex ">
+                            <ul class=" flex gap-10   ">
+                                <li><a href="index.html">خانه</a></li>
+                                <li><a href="About us.html">درباره ما</a></li>
+                                <li><a href="#tamas">تماس باما <i class="fa fa-angle-down"></i></a></li>
+                            </ul>
+                            <img class="mr-3 mt-1" src="/assets/images/icons/Arrow - Down 2.png">
+                        </nav>
+                    </div>  
+                    <div>
+                        
+                        <a href="index.html"><img class="md:hidden mt-5 ml-10" src="/assets/images/icons/Group 48.png"></a>
+                        <div class="hidden md:flex gap-1 ">
+                            <a href="signin.html"><img class="w-40 h-12 m-10 " src="/assets/images/icons/Group 34.png " alt="حساب کاربری دارم"></a>
+                            <a href="index.html"><img class="mt-3 " src="/assets/images/icons/Group 14.png" alt="بازگشت"></a>
+                        </div>
+
+                    </div>              
+                </div>
+
+            </header>
+
+
+        </div>
+
         
-        <h3>تاریخ شروع و پایان:</h3>
-        <p><strong>شروع:</strong> 20 اذر 1403 | <strong>پایان:</strong> 25 اذر 1403</p>
+
+        <div class="hidden mr-8 -mt-21" id="modal">
+                <div onclick="closeModal()" class="mb-10 flex">
+                    <img class="bg-black w-7" src="/assets/images/icons/Group 68-close navbar.png">
+                </div>
+                <div class="pt-5 pr-10 text-right bg-gray-700 text-white w-40 h-50 top-[100px] left-[12px]">
+                    <p> <a href="index.html">خانه</a></p><br>
+                    <p> <a href="#tamas"> تماس </a></p><br>
+                    <p> <a href="About us.html"></a>درباره ما</p>
+                </div>
+        </div>
+
+            <script>
+                 function showModal() {
+                const modal = document.getElementById('modal');
+                modal.classList.remove('hidden')
+                }
+
+                function closeModal() {
+                    const modal = document.getElementById('modal');
+                    modal.classList.add('hidden')
+                }
+            </script>
+
+
+
+
+
+        <div class=" flex flex-col  mb-20 mt-20 md:mb-30 justify-center items-center ">
+            
+
+            <h3 class="text-center md:text-4xl" >اطلاعات مسابقه</h3>
+            <div class="flex items-center ">
+                <p class="mt-10  text-gray-300 text-center w-95 text-sm   md:text-gray-300 md:text-center  md:text-sm md:w-full md:mr-4"> بسیار خوشحالیم که میزبان شما در این مسابقه باشیم. تمام اطلاعاتی که نیاز داری میتونی تو این ریز به دست بیاری</p>                
+            </div>
+            
+        </div>
+
+
+        <div class="flex justify-center  border-5  border-black  h-[1142px]  mb-30  md:hidden">
+            <!--<p>مکان برگزاری و ادامه</p>
+                <!--مکان برگزاری و ادامه-->
+            
+            
+            <div class="  flex flex-col  border-5 border-black">
+                <!--ردیف 1-->
+                <div class="basis-1/5 flex flex-row border-b-1 border-gray-600">
+                    <div class=" basis-1/7 flex" ><p></p></div>
+                    <div class="basis-5/7 border-x-1 border-gray-600 p-5 ">
+                        <p class="text-2xl mb-9">مکان برگزاری:</p>
+                        <p class="text-sm">جاده ارکان <br> دانشگاه دولتی بجنورد- سایت دانشگاه دولتی</p>
+                        <div class="flex gap-4 mt-10">
+                            <img class="w-7 h-7" src="/assets/images/icons/Discovery.png">
+                            <p class="text-green-400">استفاده از گوگل مپ</p>
+                        </div>
+                    </div>
+                    <div class="basis-1/7 flex " ><p></p></div>
+                </div>
+                
+                <!--ردیق 2-->
+                <div class=" basis-1/5 flex flex-row border-b-1 border-gray-600">
+                    <div class=" basis-1/7 flex" ><p></p></div>
+                    <div class="basis-5/7 border-x-1 border-gray-600 p-5">
+                        <p class="text-2xl mb-9">زمان برگزاری:</p>
+                        <div class="flex gap-3"><p class="text-sm">21 خرداد ماه 1401</p><p class="text-sm">10 صبح</p></div> 
+                        <div class="flex gap-4 mt-10">
+                            <img class="w-5 h-7" src="/assets/images/icons/Calendar.png">
+                            <p class="text-green-400"> اضافه کردن به گوگل کلندر</p>
+                        </div>
+                    </div>
+                    <div class=" basis-1/7 flex " ><p></p></div>
+                </div>
+
+                <!-- ردیف 3-->
+                <div class="basis-1/5 flex flex-row border-b-1 border-gray-600">
+                    <div class=" basis-1/7 flex " ><p></p></div>
+                    <div class="basis-5/7 border-x-1 border-gray-600 p-5">
+                        <p class="text-2xl mb-9">اطلاعات مسابقه:</p>
+                        <p class="text-sm">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                        <img class="mt-11" src="/assets/images/icons/بیشتر +.png">
+                    </div>
+                    <div class=" basis-1/7 flex " ><p></p></div>
+                </div>
+
+                <!--ردیف 4-->
+                <div class=" basis-1/5 flex flex-row border-b-1 border-gray-600" >
+                    <div class=" basis-1/7 flex" ><p></p></div>
+                    <div class="basis-5/7 border-x-1 border-gray-600 p-5">
+                        <p class="text-2xl mb-9">اهداف مسابقه:</p>
+                        <p class="text-sm">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                        <img class="mt-11" src="/assets/images/icons/بیشتر +.png">
+                    </div>
+                    <div class=" basis-1/7 flex" ><p></p></div>
+                </div>
+
+                <!-- ردیف 5-->
+                <div class="basis-1/5 flex flex-row border-b-1 border-gray-600 ">
+                    <div class=" basis-1/7 flex" ><p></p></div>
+                    <div class="basis-5/7 border-x-1 border-gray-600 p-5">
+                        <p class="text-2xl mb-9">قوانین مسابقه:</p>
+                        <p class="text-sm">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                        <img class="mt-11" src="/assets/images/icons/بیشتر +.png">
+                    </div>
+                    <div class=" basis-1/7 flex " ><p></p></div>
+                </div>
+
+                
+                <!--شبه ردیف 6-->
+                <div class="flex flex-row  ">
+                    <div class=" basis-1/7 flex"><p></p></div>
+                    <div class="basis-5/7 border-x-1 border-gray-600"><p><br></p></div>
+                    <div class=" basis-1/7 flex"><p></p></div>
+                </div>
+
+
+
+            </div>
+                        
+        </div>
+
+
+
+        <div class="hidden md:flex md:justify-center  md:border-5 md: border-black  md:h-[660px]  md:mb-20  ">
+            <!--<p>مکان برگزاری و ادامه</p>
+                <!- - برای دسکتاپ مکان برگزاری و ادامه-->
+            
+            
+            <div class="  flex flex-col  border-5 border-black">
+                <!--ردیف 1-->
+                <div class="basis-1/5 flex flex-row border-b-1 border-gray-600">
+                    <div class=" basis-1/7 flex" ><p></p></div>
+                    <div class="basis-5/7 border-x-1 border-gray-600 p-5 ">
+                        <p class="text-2xl mb-9">مکان برگزاری:</p>
+                        <p class="text-sm">جاده ارکان <br> دانشگاه دولتی بجنورد- سایت دانشگاه دولتی</p>
+                        <div class="flex gap-4 mt-10">
+                            <img class="w-7 h-7" src="/assets/images/icons/Discovery.png">
+                            <p class="text-green-400">استفاده از گوگل مپ</p>
+                        </div>
+                    </div>
+                    <div class="basis-5/7 border-x-1 border-gray-600 p-5">
+                        <p class="text-2xl mb-9">زمان برگزاری:</p>
+                        <div class="flex gap-3"><p class="text-sm">21 خرداد ماه 1401</p><p class="text-sm">10 صبح</p></div> 
+                        <div class="flex gap-4 mt-10">
+                            <img class="w-5 h-7" src="/assets/images/icons/Calendar.png">
+                            <p class="text-green-400"> اضافه کردن به گوگل کلندر</p>
+                        </div>
+                    </div>
+                    <div class="basis-1/7 flex " ><p></p></div>
+                </div>
+                
+                <!--ردیق 2-->
+                <div class=" basis-1/5 flex flex-row border-b-1 border-gray-600">
+                    <div class=" basis-1/7 flex" ><p></p></div>
+                    <div class="basis-5/7 border-x-1 border-gray-600 p-5">
+                        <p class="text-2xl mb-9">اطلاعات مسابقه:</p>
+                        <p class="text-sm">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                        <img class="mt-11" src="/assets/images/icons/بیشتر +.png">
+                    </div>
+                    <div class="basis-5/7 border-x-1 border-gray-600 p-5">
+                        <p class="text-2xl mb-9">قوانین مسابقه:</p>
+                        <p class="text-sm">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                        <img class="mt-11" src="/assets/images/icons/بیشتر +.png">
+                    </div>
+                    <div class=" basis-1/7 flex " ><p></p></div>
+                </div>
+
+                <!-- ردیف 3-->
+                <div class="basis-1/5 flex flex-row  border-gray-600">
+                    <div class=" basis-1/7 flex " ><p></p></div>
+                    <div class="basis-5/7 border-x-1 border-gray-600 p-5">
+                        <p class="text-2xl mb-9">اهداف مسابقه:</p>
+                        <p class="text-sm">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                        <img class="mt-11" src="/assets/images/icons/بیشتر +.png">
+                    </div>
+                    <div class="basis-5/7 border-x-1 border-gray-600 p-5"></div>
+                    <div class=" basis-1/7 flex " ><p></p></div>
+                </div>
+
+
+            </div>
+                        
+        </div>
+
         
-        <h3>جوایز:</h3>
-        <ul>
-            <li>نفر اول: 50 میلیون تومان</li>
-            <li>نفر دوم: 35 میلیون تومان</li>
-            <li>نفر سوم: 20 میلیون تومان</li>
-        </ul>
-        
-        <h3>نحوه شرکت:</h3>
-        <p>۱. ثبت‌نام در سایت <br> ۲. شرکت در مرحله مقدماتی <br> ۳. ورود به فینال و رقابت نهایی</p>
-        
-        <button>ثبت‌نام در مسابقه</button>
-        
-        <h3>وضعیت مسابقه:</h3>
-        <p>در حال ثبت‌نام</p>
-    </section>
-    
-    <footer>
-        <p>تمامی حقوق محفوظ است © ۲۰۲۵</p>
-    </footer>
+
+        <div class="flex flex-col  mb-20  md:flex md:mb-50  " id="tamas">
+
+                <div class="flex mr-15 md:flex  md:justify-center ">
+                    <p class=" text-xl  mb-10 r ">راه های ارتباطی</p>
+                </div>
+
+
+                <div class= "flex flex-col items-center md:flex md:flex-row justify-center gap-5">
+                
+                    <div class=" flex border-2 border-gray-400 rounded-2xl w-95 h-15  text-gray-400 mb-5 md:hover:bg-green-400 md:hover:text-white md:hover:border-green-400">
+                            <img class="w-5 h-5 m-5" src="/assets/images/icons/Message.png">
+                            <p class="m-4">ایمیل:</p>
+                           <email class="mt-4 mr-15">namadin@gmail.com</email> 
+                    </div>
+
+                    <div class=" flex border-2 border-gray-400 rounded-2xl w-95 h-15  text-gray-400 mb-5 md:hover:bg-green-400 md:hover:text-white md:hover:border-green-400">
+                            <image class="w-5 h-5 m-5" src="/assets/images/icons/icons8-instagram-48.png" ></image>
+                            <p class="m-4">اینستاگرام:</p>
+                            <p class="mt-4 mr-20">@ubcomp4</p>
+                    </div>
+
+                    <div class=" flex border-2 border-gray-400 rounded-2xl w-95  h-15  text-gray-400 mb-5  md:hover:bg-green-400 md:hover:text-white md:hover:border-green-400 ">
+                           <img class="w-5 h-5 m-5"  src="/assets/images/icons/Calling.png">
+                            <p class="m-4">شماره کارشناس:</p>
+                            <p class="mt-4 mr-10">09354444274</p>
+                    </div>
+
+                </div>
+                
+        </div>
+
+
+    </div>
+
 </body>
 </html>

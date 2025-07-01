@@ -1,29 +1,105 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ورود</title>
+    <title>فرم ورود</title>
+    <script src="tailwind.js"></script>
 </head>
 <body>
-    <section id="signin">
-        <h2>فرم ورود</h2>
-        <form action="#" method="post">
-            <label for="login">ایمیل یا شماره تماس:</label>
-            <input type="text" id="login" name="login" required><br><br>
+    <div class="bg-black text-white flex-col  ">
+      <header>
+        <div class="flex justify-between p-8 ">
+          <div class=" justify-center pt-2">
+                <button  onclick="showModal()"  class="md:hidden h-10 w-7">
+                    <img src="/assets/images/icons/icons8-menu.png">
+               </button>
+            </div>
+                    
+          <div >
+            <img class="md:hidden" src="assets/images/logo/logo.png" alt="لوگوی سایت">
+          </div>
 
-            <label for="password">رمز عبور:</label>
-            <input type="password" id="password" name="password" required><br><br>
+          <div class="hidden md:flex md:pt-15  md:p-0 md: md:absolute md:mr-15">
+            <nav class="flex ">
+                <ul class=" flex gap-10   ">
+                  <li><a href="#">خانه</a></li>
+                  <li><a href="#">درباره ما</a></li>
+                  <li><a href="#">تماس باما <i class="fa fa-angle-down"></i></a></li>
+                </ul>
+                <img class="mr-3 mt-1" src="/assets/images/icons/Arrow - Down 2.png">
+            </nav>
+          </div>  
+          <div>
+                        
+            <a href="index.html"><img class="md:hidden mt-5 ml-10" src="/assets/images/icons/Group 48.png"></a>
+            <div class="hidden md:flex  ">
+              <a href="index.html"><img class=" " src="/assets/images/icons/Group 14.png" alt="برگشت در حالت دسکتاپ"></a>
+            </div>
 
-            <button type="submit">ورود</button>
-        </form>
+          </div>              
+        </div>
+        
+      </header>
 
-        <p><a href="#">فراموشی رمز عبور</a></p>
-        <p>حساب ندارید؟ <a href="signup.html">ثبت‌نام کنید</a></p>
-    </section>
+      <div class="hidden mr-8 -mt-21" id="modal">
+                <div onclick="closeModal()" class="mb-10 flex">
+                    <img class="bg-black w-7" src="/assets/images/icons/Group 68-close navbar.png">
+                </div>
+                <div class="pt-5 pr-10 text-right bg-gray-700 text-white w-40 h-50 top-[100px] left-[12px]">
+                    <p> <a href="index.html">خانه</a></p><br>
+                    <p> <a href="#"> تماس </a></p><br>
+                    <p> <a href="About us.html"></a>درباره ما</p>
+                </div>
+        </div>
 
-    <footer>
-        <p>تمامی حقوق محفوظ است © ۲۰۲۵</p>
-    </footer>
+            <script>
+                 function showModal() {
+                const modal = document.getElementById('modal');
+                modal.classList.remove('hidden')
+                }
+
+                function closeModal() {
+                    const modal = document.getElementById('modal');
+                    modal.classList.add('hidden')
+                }
+            </script>
+
+
+      <div class=" flex flex-col justify-center items-center  content-stretch">
+
+        <div class=" p-10 ">
+          <h2 class="text-center text-3xl font-bold relative object-cover"> ورود</h2>
+          <img class=" absolute -mt-11  w-20" src="/assets/images/icons/Rectangle 15-bottm-left.png">
+        </div>
+
+        <div class=" ">
+          <form action="#" method="post" class="flex flex-col justify-center items-center mb-6">
+              <label for="login">ایمیل یا شماره تماس</label>
+              <input class=" border-2 border-gray-400 rounded-lg mt-3 w-50 h-10 hover:border-green-400 " type="text"  name="login" >
+
+              <label class="mt-10" for="password">رمز عبور</label>
+              <input class=" border-2 border-gray-400 rounded-lg mt-3 w-50 h-10 hover:border-green-400 " type="password" id="password" name="password" required><br><br>
+
+              <button class=" border-2 border-green-400 bg-green-500  rounded-lg mt-10 w-15 h-10"  type="submit">ورود</button>
+          </form>
+          <div class=" flex flex-col justify-center items-center">
+            <p class="mb-2"><a href="#">فراموشی رمز عبور</a></p>
+            <p>حساب ندارید؟ <a href="signup.html">ثبت‌نام کنید</a></p>
+          </div>
+          
+        </div>
+
+        
+        <footer class="mt-10 pb-10  ">
+           <p>تمامی حقوق محفوظ است © ۲۰۲۵</p>
+        </footer>
+
+      </div>       
+        
+        
+    </div>
+
+    
 </body>
 </html>
